@@ -20,6 +20,6 @@ This project focuses on a scaled-down prototype demonstrating core features such
 
 **Backend:** Node.js/Express
 
-**Database:** _pending_
+**Database:** Mongodb
 
-**Hosting**: _pending_
+**Hosting**: Vercel
