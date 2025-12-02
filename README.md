@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OpenPath
 
-## Getting Started
+_Simplifying access to addiction treatment services._
 
-First, run the development server:
+OpenPath is a cloud-based, mobile-friendly web platform designed to connect individuals seeking addiction treatment with providers who have available services. The platform addresses the critical challenge of timely access to care by centralizing information and providing a simple, user-friendly interface for searching treatment options.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project focuses on a scaled-down prototype demonstrating core features such as a searchable database of treatment providers and a basic matching system. OpenPath showcases how emerging technologies, like cloud hosting and mobile accessibility, can improve healthcare access and support informed decision-making.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+**Cloud-Based Database:** Stores information about treatment centers, services, and general availability.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Search Functionality:** Users can search providers by location, service type, or specialty.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Provider Matching:** A simple algorithm matches users with appropriate providers based on input criteria.
 
-## Learn More
+**Mobile-Friendly Interface:** Accessible from any device to ensure users can find support when they need it most.
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
+**Frontend:** HTML, Tailwind CSS, React.js, TypeScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Backend:** Node.js/Express
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Database:** Mongodb
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Hosting**: Vercel
