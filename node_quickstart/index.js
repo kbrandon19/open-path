@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 
 async function runGetStarted() {
   // Replace the uri string with your connection string
-  const uri = 'mongodb+srv://kbrandon319_db_user:Opb0v9I5d5akjdGS@cluster0.zaeedjh.mongodb.net/';
+  const uri = process.env.DB_URI;
   const client = new MongoClient(uri);
 
   try {
