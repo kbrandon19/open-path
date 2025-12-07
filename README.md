@@ -23,3 +23,4 @@ This project focuses on a scaled-down prototype demonstrating core features such
 **Database:** Mongodb
 
 **Hosting**: Vercel
+
