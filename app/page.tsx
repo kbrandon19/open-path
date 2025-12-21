@@ -1,14 +1,18 @@
 import Image from "next/image";
 import Hero from './components/hero/hero'
 import IntroBanner from "./components/introBanner";
+import Services from "./components/services";
+import Search_cta from "./components/search_cta";
 
 export default function Home() {
   return (
 
     
-    <div className="lg:px-16">
+    <div className="">
     <Hero/>
     <IntroBanner/>
+    <Services/>
+    <Search_cta/>
 
     </div>
   );
