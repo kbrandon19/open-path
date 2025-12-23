@@ -3,6 +3,7 @@ import Hero from './components/hero/hero'
 import IntroBanner from "./components/introBanner";
 import Services from "./components/services";
 import Search_cta from "./components/search_cta";
+import FAQ from "./components/faq";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <IntroBanner/>
     <Services/>
     <Search_cta/>
+    <FAQ/>
 
     </div>
   );

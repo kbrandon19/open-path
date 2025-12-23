@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <div><div className="relative min-h-screen lg:h-screen w-full ">
+      <div className="relative min-h-screen lg:h-screen w-full ">
       <div className="relative mx-auto max-w-7xl h-full  flex flex-col lg:flex-row items-center">
 
         {/* Image */}
@@ -57,6 +57,6 @@ export default function Hero() {
 
       </div>
     </div>
-    </div>
+    
   );
 }
