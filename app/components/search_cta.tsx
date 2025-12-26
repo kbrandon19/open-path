@@ -20,7 +20,7 @@ function search_cta() {
         <div className='basis-1/2'>
             <h1 className='text-4xl font-bold'>Simplifying access to addiction treatment services.</h1>
             <p className='my-4 text-base'>Our platform connects individuals seeking help with a curated network of verified mental health providers, ensuring personalized and effective care.</p>
-            <Input/> <button className='bg-white text-[#658E9C] px-4 py-2 rounded-md font-semibold'>Get Started</button>
+            <Input className='w-86 placeholder-grey-400' placeholder='Location' /> <button className='bg-white text-[#658E9C]  h-auto px-4 py-2 rounded-md font-semibold'>Search</button>
         </div>
     </div>
   )
