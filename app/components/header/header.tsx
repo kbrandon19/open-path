@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function header() {
   return (
-    <div className='relative w-full h-auto '>
+    <div className=' w-full h-auto '>
     <div className=' absolute w-full top-0 z-1 py-4 px-38 text-black '>
 
         {/* Container */}
@@ -23,7 +24,9 @@ function header() {
 
           {/* Desktop Menu */}
             <div className='hidden md:flex w-auto h-auto flex-row gap-4 items-center  text-sm'>
-            <div>Find A Provider</div>
+            <div>
+              <Link href="/providers">Find A Provider</Link>
+            </div>
             <div>About</div>
             <div>Contact</div>
             <div>FAQ</div>
