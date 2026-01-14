@@ -7,8 +7,8 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl h-full  flex flex-col lg:flex-row items-center">
 
         {/* Image */}
-        <div className="w-full lg:w-2/3 ml-auto relative">
-          <div className="relative w-full h-[600px] md:rounded-3xl">
+        <div className="w-full lg:w-2/3 ml-auto relative md:rounded-3xl">
+          <div className="relative w-full h-[600px] ">
             <Image
               src="/images/hero-labyrinth.jpg"
               alt="Person walking a stone labyrinth near the ocean"
