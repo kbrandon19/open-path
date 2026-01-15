@@ -36,7 +36,7 @@ export default function Hero() {
             p-8
             shadow-lg
             mt-8 lg:mt-0
-            z-10
+            z-5
             
           "
           >
