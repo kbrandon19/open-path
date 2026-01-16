@@ -1,4 +1,3 @@
-// models/FAQ.ts
 export interface FAQ {
   _id?: string;
   question: string;
