@@ -39,7 +39,7 @@ function header() {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex w-auto h-auto flex-row gap-4 items-center  text-sm">
+            <div className="hidden md:flex w-auto h-auto flex-row gap-4 items-center  text-md">
               <div>
                 <Link href="/providers">Find A Provider</Link>
               </div>
@@ -48,14 +48,9 @@ function header() {
               <div>FAQ</div>
             </div>
 
-            <div className=" hidden md:flex px-4 py-2 w-auto h-auto rounded-full bg-[#E0B04E]  flex-row items-center gap-2 text-sm">
-              Login
-              <div className="w-6 h-6 rounded-full bg-[#515151]"></div>
-            </div>
           </div>
         </div>
 
-        {/* Login Item */}
       </div>
     </div>
   );
