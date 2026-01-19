@@ -1,59 +1,92 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
 
-function header() {
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
+
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className=" w-full h-auto ">
-      <div className=" fixed w-full top-0 z-10 py-4 px-38 text-black bg-white">
-        {/* Container */}
-        <div className="flex h-auto w-full flex-row justify-between  items-center">
-          {/* Logo */}
-
-          <div className="">
-            <div className=" hidden md:block">
-              <Image
+    <header className="bg-white shadow-md sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-2xl font-bold text-[#658E9C]">
+          <Link href="/">
+   <Image
                 src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/v1768502260/Open%20Path/Logo2_v86wol.png`}
                 alt="Logo"
                 width={175}
                 height={59}
-              ></Image>
-            </div>
-
-            <div className=" md:hidden">
-              <Image
-                src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/v1768500804/Open%20Path/Logo-Symbol_byqms7.png`}
-                alt="Logo"
-                width={125}
-                height={0}
-                priority
-              ></Image>
-            </div>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="flex w-auto h-auto flex-row gap-10 justify-between">
-            {/* Mobile Menu */}
-            <div className="flex md:hidden px-4 py-2 w-auto h-auto rounded-full flex-row items-center gap-2">
-              Menu <div className="w-6 h-6 rounded-full bg-[#515151]"></div>
-            </div>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex w-auto h-auto flex-row gap-4 items-center  text-md">
-              <div>
-                <Link href="/providers">Find A Provider</Link>
-              </div>
-              <div>About</div>
-              <div>Contact</div>
-              <div>FAQ</div>
-            </div>
-
-          </div>
+              />         </Link>
         </div>
 
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-8">
+          <Link href="/" className="text-gray-700 hover:text-[#658E9C] transition-colors">
+            Home
+          </Link>
+          <Link href="/providers" className="text-gray-700 hover:text-[#658E9C] transition-colors">
+            Providers
+          </Link>
+          <Link href="/about" className="text-gray-700 hover:text-[#658E9C] transition-colors">
+            About
+          </Link>
+          <Link href="/contact" className="text-gray-700 hover:text-[#658E9C] transition-colors">
+            Contact
+          </Link>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-gray-700 focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
-    </div>
+
+      {/* Mobile Navigation */}
+      <div className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <nav className="px-4 py-4 space-y-4">
+          <Link
+            href="/"
+            className="block text-gray-700 hover:text-[#658E9C] transition-colors"
+            onClick={toggleMenu}
+          >
+            Home
+          </Link>
+          <Link
+            href="/providers"
+            className="block text-gray-700 hover:text-[#658E9C] transition-colors"
+            onClick={toggleMenu}
+          >
+            Providers
+          </Link>
+          <Link
+            href="/about"
+            className="block text-gray-700 hover:text-[#658E9C] transition-colors"
+            onClick={toggleMenu}
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            className="block text-gray-700 hover:text-[#658E9C] transition-colors"
+            onClick={toggleMenu}
+          >
+            Contact
+          </Link>
+        </nav>
+      </div>
+    </header>
   );
 }
 
-export default header;
+export default Header;

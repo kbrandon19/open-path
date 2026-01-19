@@ -62,7 +62,6 @@ export default function FilterOption({
         aria-haspopup="menu"
         aria-expanded={open}
       >
-        <Filter className="size-4" />
         <span className="text-sm">{title}</span>
         {selectedCount > 0 && (
           <span className="ml-1 inline-flex items-center justify-center rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium">
@@ -74,7 +73,7 @@ export default function FilterOption({
 
       {open && (
         <div className="absolute right-0 z-50 mt-2 w-56 rounded-md border bg-background p-2 shadow-lg">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 max-h-64 overflow-y-auto">
             {options.map((opt) => (
               <label
                 key={opt.value}

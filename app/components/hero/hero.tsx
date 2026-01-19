@@ -31,7 +31,7 @@ export default function Hero() {
             lg:top-1/2
             lg:-translate-y-1/2
             w-full lg:w-[450px]
-            bg-[#9DBB73]
+            bg-[#658E9C]
             rounded-3xl
             p-8
             shadow-lg
@@ -40,7 +40,7 @@ export default function Hero() {
             
           "
           >
-            <h2 className="text-4xl font-semibold text-black mb-4">
+            <h2 className="text-4xl font-semibold text-white mb-4">
               Simplifying access to addiction treatment services
             </h2>
 

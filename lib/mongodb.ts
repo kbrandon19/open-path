@@ -16,9 +16,9 @@ interface MongooseCache {
   promise: Promise<typeof mongoose> | null;
 }
 
-let cached: MongooseCache = (globalThis as typeof globalThis & { mongoose?: MongooseCache }).mongoose;
+let cached: MongooseCache = (globalThis as typeof globalThis & { mongoose?: MongooseCache }).mongoose ?? { conn: null, promise: null };
 
-if (!cached) {
+if (!cached.conn && !cached.promise) {
   cached = (globalThis as typeof globalThis & { mongoose?: MongooseCache }).mongoose = { conn: null, promise: null };
 }
 

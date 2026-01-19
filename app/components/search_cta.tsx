@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 function search_cta() {
   return (
@@ -15,9 +15,8 @@ function search_cta() {
             network of verified mental health providers, ensuring personalized
             and effective care.
           </p>
-          <Input className="w-64 placeholder-grey-400" placeholder="Location" />{" "}
-          <button className="bg-white text-[#658E9C]  h-auto px-4 py-2 rounded-md font-semibold">
-            Search
+          <button className="bg-white text-[#658E9C] hover:text-white hover:bg-[#4e6f7a] h-auto px-4 py-2 rounded-md font-semibold">
+           <Link href="/providers#list">Find Your Provider Today</Link>
           </button>
         </div>
 
