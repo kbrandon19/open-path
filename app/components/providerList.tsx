@@ -7,12 +7,12 @@ import FilterOption, { FilterOptionItem } from "@/components/ui/filter-option";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 // Debounce utility function
-function debounce<T extends (...args: unknown[]) => unknown>(
-  func: T,
+function debounce<TArgs extends unknown[], TReturn>(
+  func: (...args: TArgs) => TReturn,
   wait: number
-): (...args: Parameters<T>) => void {
+): (...args: TArgs) => void {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+  return (...args: TArgs) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
